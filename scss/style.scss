@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.bg-primary {
+  --bs-bg-opacity: none;
+  background-color: rgba(
+    var(--bs-primary-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  display: flex; /* primera propiedad que habilita aplicar flexbox */
+  flex-direction: row; /*row ; column ; row-reverse ; column-reverse */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+.gridConteiner {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "titulo titulo"
+    "video encabezado"
+    "footer footer";
+}
+header {
+  grid-area: header;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.rotate {
+  transform: rotate(-45deg);
+}
+.titulo {
+  grid-area: titulo;
+  display: grid;
+  background-color: #246355;
+}
+.encabezado {
+  grid-area: encabezado;
+}
+.video {
+  grid-area: video;
+  background-color: #246355;
+  width: 500;
+  height: 350;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bgColor {
+  background-color: #020202;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.p-50 {
+  padding: 50px;
+}
+.gridContacto {
+  min-height: 100vh;
+  padding: 0%;
+}
+.contactoFooter {
+  text-align: right;
+  font-size: 25px;
+}
+
+/* home */
+
+h1 {
+  display: grid;
+  background-color: #246355;
+  font-family: tahoma; /* modifica familia tipografica*/
+  font-size: 50px; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: center;
+  padding: 35px;
+  align-content: space-between;
+}
+h2 {
+  font-family: arial; /* modifica familia tipografica*/
+  font-size: 25px; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: center;
+  padding: 53px;
+}
+
+/* recetas */
+.gridRecetas {
+  display: grid;
+  grid-template-columns: 200% 200%;
+  grid-template-areas: receta1 alfajores;
+  min-height: 100vh;
+}
+.recetas {
+  text-align: center;
+}
+.recetasTextos {
+  min-height: 100vh;
+  font-family: arial; /* modifica familia tipografica*/
+  font-size: 2rem; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  background-color: rgb(74, 115, 248);
+}
+
+/* Galeria*/
+
+.galeria {
+  display: grid;
+  grid-template-columns: auto;
+  object-fit: cover;
+}
+
+/* talleres */
+
+.tableroCompleto {
+  display: grid;
+  grid-template-columns: 200% 200%;
+  font-family: tahoma;
+  font-size: 25px;
+}
+.tablero {
+  margin: auto;
+}
+table {
+  background-color: white;
+  text-align: left;
+  width: 50%;
+}
+th,
+td {
+  border: solid 1px black;
+  padding: 20px;
+}
+.encabezado {
+  background-color: #246355;
+  color: rgb(2, 2, 2);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* contacto */
+
+.gridContacto {
+  display: grid;
+  grid-template-columns: 100% 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "contactoimg contactoimg"
+    "contacto contacto";
+  justify-content: space-between;
+}
+.contacto {
+  min-height: 100vh;
+  background-color: aqua;
+  font-family: tahoma; /* modifica familia tipografica*/
+  font-size: 2rem; /*modifica tamaño tipografico */
+  font-weight: bold; /*modifica grosor de tipografia*/
+  font-style: italic; /*modifica estilo tipografia (italica y normal)*/
+  text-align: left;
+}
+
+/*mediaquerie*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    background-color: #246355;
+    flex-direction: column;
+  }
+  .rotate {
+    transform: rotate(0deg);
+    padding: 1rem;
+  }
+  .logo {
+    padding: 1rem;
+  }
+  .gridConteiner {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "titulo titulo"
+      "video video"
+      "encabezado encabezado"
+      "footer footer";
+  }
+  h1 {
+    font-size: 30px;
+    background-color: #246355;
+  }
+  .imgTortas {
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .encabezado {
+    display: flex;
+    background-color: #000000;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  .video {
+    display: flex;
+  }
+  .recetasTextos {
+    background-color: #246355;
+  }
+  .gridContacto {
+    background-color: #000000;
+  }
+  .contacto {
+    background-color: #000000;
+    color: aliceblue;
+    text-align: center;
+  }
+  .contactoimg {
+    background-color: #000000;
+    display: grid;
+    justify-content: center;
+  }
+  .gridContacto {
+    display: grid;
+    grid-template-columns: 200%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "contactoimg"
+      "contacto";
+    justify-content: space-between;
+  }
+  .tablero {
+    border: 0px;
+  }
+  .table table-dark table-hover {
+    font-size: 22px;
+  }
+  .encabezado {
+    display: none;
+  }
+  .interior {
+    margin-bottom: 8px;
+    border-bottom: 4px solid #ddd;
+    display: block;
+  }
+  td {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+  }
+}
