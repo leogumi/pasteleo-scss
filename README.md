@@ -1,5 +1,1 @@
-codigo que resuelve el diseño responsive en vista mobile y desktop
-maqueteado de paginas con bootstrap
-se modifico css y talleres
-se acomodo navbar
-se crea scss y style.scss
+se modifica el title, se agrega etiqueta description con el contenido: te ayudaremos a conseguir un importante oficio y salida laboral con nuestros cursos certificados a nivel nacional y se agrega etiqueta keywords con el contenido:Pasteleria, recetas, dulce, tortas, tartas, cursos de pasteleria
